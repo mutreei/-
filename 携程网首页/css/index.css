@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #fff;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 头部搜素模块制作 */
+
+header {
+    display: flex;
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: 12px;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1));
+    box-shadow: 0 4px 9px rgba(0, 0, 0, .1);
+    z-index: 999;
+}
+
+.search {
+    flex: 1;
+    width: 477px;
+    height: 28px;
+    background-color: #fff;
+    margin-top: 8px;
+    border-radius: 14px;
+    color: #666;
+    text-indent: 5px;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.search_icon {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-top: 7px;
+    margin-left: 10px;
+    background: url(../images/icon_sprite.png) no-repeat;
+    background-size: 20px auto;
+}
+
+.text {
+    float: left;
+}
+
+.mine {
+    width: 54px;
+    height: 44px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+.mine::before {
+    display: block;
+    /* margin-left: 16px; */
+    margin: 3px 0 0 16px;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon_sprite.png) 1px -36px no-repeat;
+    background-size: 21px auto;
+}
+
+
+/* focus */
+
+.focus img {
+    width: 100%;
+    border-radius: 0 0 10% 10%;
+}
+
+
+/* swiper插件 */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+/* 导航栏模块 local_nav */
+
+.local_nav {
+    position: relative;
+    height: 64px;
+    margin: -60px 12px 8px;
+    background-color: #fff;
+    display: flex;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    padding: 4px 0 8px;
+    z-index: 99;
+}
+
+.local_nav a {
+    flex: 1;
+    display: flex;
+    /* border: 1px solid #ccc; */
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    font-size: 12px;
+}
+
+.local_nav a .local_img {
+    width: 40px;
+    height: 40px;
+    background-color: skyblue;
+    background: url(../images/local_img.png) 0 0 no-repeat;
+    background-size: 40px auto;
+}
+
+.local_nav a:nth-child(2) .local_img {
+    background: url(../images/local_img.png) 0 -40px no-repeat;
+    background-size: 40px auto;
+}
+
+.local_nav a:nth-child(3) .local_img {
+    background: url(../images/local_img.png) 0 -80px no-repeat;
+    background-size: 40px auto;
+}
+
+.local_nav a:nth-child(4) .local_img {
+    background: url(../images/local_img.png) 0 -120px no-repeat;
+    background-size: 40px auto;
+}
+
+.local_nav a:nth-child(5) .local_img {
+    background: url(../images/local_img.png) 0 -160px no-repeat;
+    background-size: 40px auto;
+}
+
+
+/* grid_nav模块制作 */
+
+.grid_nav {
+    margin: 0 10px;
+    height: 198px;
+    /* background-color: pink; */
+    border-radius: 10px;
+    display: flex;
+    line-height: 65px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.grid_nav_hotal {
+    flex: 1;
+    border-bottom: 1px solid #fff;
+    /* margin-bottom: 1px; */
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    background: -webkit-linear-gradient(left, #fb5a56, #ffd051);
+}
+
+.grid_nav_hotal .hotal {
+    flex: 4;
+    border-right: 1px solid #fff;
+    background: url(../images/grid-nav-items-sale_hotel@v7.15.png) no-repeat right bottom;
+    text-indent: 10px;
+    background-size: 73px auto;
+    /* padding: 25.6px 0 25.6px 12px; */
+}
+
+.grid_nav_hotal .homestay {
+    flex: 3;
+    border-right: 1px solid #fff;
+    background: url(../images/grid-nav-items-homestay@v7.15.png) no-repeat left bottom;
+    background-size: 37px auto;
+    text-align: center;
+    /* padding-top: 25.6px; */
+}
+
+.grid_nav_hotal .sale_hotal {
+    flex: 6;
+    background: url(../images/grid-nav-items-hot.png) no-repeat right bottom;
+    background-size: 100% auto;
+    text-align: center;
+    /* padding-top: 25.6px; */
+    color: #A05416;
+}
+
+.grid_nav_flight {
+    display: flex;
+    border-bottom: 1px solid #fff;
+    /* margin-bottom: 1px; */
+    flex: 1;
+    color: #fff;
+    background: -webkit-linear-gradient(left, #4b90ed, #53bbed);
+}
+
+.grid_nav_flight .air_ticket {
+    flex: 4;
+    border-right: 1px solid #fff;
+    background: url(../images/grid-nav-items-flight@v7.15.png) no-repeat right bottom;
+    background-size: 79px auto;
+    text-indent: 10px;
+}
+
+.grid_nav_flight .train_ticket {
+    flex: 3;
+    border-right: 1px solid #fff;
+    background: url(../images/grid-nav-items-train.png) no-repeat left bottom;
+    text-align: center;
+    background-size: 37px auto;
+}
+
+.grid_nav_flight .bus_ship_ticket {
+    flex: 3;
+    text-align: center;
+    border-right: 1px solid #fff;
+}
+
+.grid_nav_flight .taxi {
+    text-align: center;
+    flex: 3;
+}
+
+.grid_nav_travel {
+    flex: 1;
+    background: -webkit-linear-gradient(left, #34c2a9, #6cd558);
+    display: flex;
+    color: #fff;
+}
+
+.grid_nav_travel .travel {
+    flex: 4;
+    border-right: 1px solid #fff;
+    text-indent: 10px;
+    background: url(../images/travel.png) no-repeat right bottom;
+    background-size: 94px auto;
+}
+
+.grid_nav_travel .train_travle {
+    flex: 3;
+    border-right: 1px solid #fff;
+    text-align: center;
+    background: url(../images/train_travel.png) no-repeat left bottom;
+    background-size: 61px auto;
+}
+
+.grid_nav_travel .ship_travel {
+    flex: 3;
+    text-align: center;
+    border-right: 1px solid #fff;
+}
+
+.grid_nav_travel .custom_travel {
+    text-align: center;
+    flex: 3;
+}
+
+
+/* subnav_entry模块制作 */
+
+.subnav_entry {
+    /* height: 110px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.subnav_entry a {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #000;
+}
+
+.subnav_entry a .bgimg {
+    width: 28px;
+    height: 28px;
+    margin: 10px 0 5px;
+    background-color: pink;
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 0;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(2) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -28px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(3) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -56px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(4) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -84px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(5) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -112px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(6) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -140px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(7) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -168px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(8) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -196px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(9) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -224px;
+    background-size: 28px;
+}
+
+.subnav_entry a:nth-child(10) .bgimg {
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 -252px;
+    background-size: 28px;
+}
+
+
+/* 活动模块 */
+
+.scale_hd {
+    position: relative;
+    height: 44px;
+    background-color: #fff;
+    border-top: 1px solid #bbb;
+    border-bottom: 2px solid #eee;
+    margin-top: 10px;
+}
+
+.scale .scale_hd h2 {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    text-indent: -999px;
+    overflow: hidden;
+    width: 79px;
+    height: 15px;
+    background-color: skyblue;
+    background: url(../images/huodong.png) no-repeat 0 -19px;
+    background-size: 79px auto;
+}
+
+.scale .scale_hd span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 1px 10px 1px 8px;
+    background: -webkit-linear-gradient(left, #ff4f68, #ff6ac3);
+    color: #fff;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.scale .scale_hd span::after {
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.scale_bd {
+    width: 100%;
+    display: flex;
+    height: 81px;
+    border-bottom: 1px solid #ddd;
+}
+
+.scale_bd .left_mod {
+    flex: 1;
+    background: url(../images/sale_left.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.scale_bd .right_mod {
+    flex: 1;
+    background: url(../images/sale_right.jpg) no-repeat;
+    background-size: 100% auto;
+    border-left: 1px solid #eee;
+}
+
+.fun {
+    margin-top: 10px;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.fun .tel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 5px;
+    background: url(../images/sprinte.png) no-repeat -71px -181px;
+    background-size: 122.35px auto;
+}
+
+.fun .download {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    align-items: center;
+}
+
+.fun .download .icon {
+    background: url(../images/sprinte.png) no-repeat -71px -204px;
+    background-size: 122.35px auto;
+}
+
+.fun .myself {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    align-items: center;
+}
+
+.fun .myself .icon {
+    background: url(../images/sprinte.png) no-repeat -71px -365.3px;
+    background-size: 122.35px auto;
+}
+
+
+/* 版本模块 copyright */
+
+.copyright {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.copyright span {
+    padding: 0 5px;
+}
+
+.message a {
+    color: #666;
+}
+
+.copyright_mode {
+    margin-top: 5px;
+}
+
+.copyright_mode a {
+    color: #999;
+}
